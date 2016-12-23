@@ -3,6 +3,6 @@ CREATE DATABASE IF NOT EXISTS BCREW;
 create table if not exists BOOK (
    id BIGINT NOT NULL AUTO_INCREMENT,
    name VARCHAR(200) NOT NULL,
-   author BIGINT NOT NULL,
+   author VARCHAR(100) NOT NULL,
    PRIMARY KEY (id)
 );

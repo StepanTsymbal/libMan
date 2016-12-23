@@ -1,5 +1,6 @@
 package com.styopik.LibraryManager;
 
+import com.styopik.librarymanager.controller.LibraryController;
 import com.styopik.librarymanager.model.Book;
 import com.styopik.librarymanager.service.impl.BookServiceImpl;
 
@@ -9,7 +10,7 @@ import junit.framework.TestSuite;
 
 public class AppTest extends TestCase {
 	
-	BookServiceImpl bookService = new BookServiceImpl();
+	LibraryController controller = new LibraryController();
 
     public AppTest( String testName ) {
         super( testName );
@@ -37,6 +38,6 @@ public class AppTest extends TestCase {
     	
     	String s = "\"name\" author";
     	
-        assertEquals(bookService.stringToBook(s), new Book("\"name\"", "author"));
+        assertEquals(controller.stringToBook(s), new Book("\"name\"", "author"));
     }
 }

@@ -55,27 +55,6 @@ public class BookDaoImpl implements BookDAO {
         return jdbcTemplate.query(sql, new BookMapper());
 	}
 
-	public void deleteBookByName(String name) {
-		
-		String sql = "DELETE FROM BOOK WHERE NAME = ?";
-	      
-		jdbcTemplate.update(sql, name);
-	}
-
-	public void editBookByName(String oldName, String newName) {
-		
-		String sql = "UPDATE BOOK SET NAME = ? WHERE NAME = " +  "'" + oldName + "'";
-
-		jdbcTemplate.update(sql, newName);
-	}
-
-	public void deleteBookByAuthor(String author) {
-		
-		String sql = "DELETE FROM BOOK WHERE AUTHOR = ?";
- 
-		jdbcTemplate.update(sql, author);
-	}
-
 	public Book findById(int id) {
 		
 	    String sql = "SELECT * FROM BOOK WHERE ID = " + id;

@@ -13,11 +13,8 @@ public interface BookDAO {
 	public void addBook(Book book);
 	
 	public void deleteBook(int id);
-	public void deleteBookByName(String name);
-	public void deleteBookByAuthor(String author);
 	
 	public void editBookById(String name, int id);
-	public void editBookByName(String oldName, String newName);
 	
 	public List<Book> findAll();
 	public List<Book> findByName(String name);

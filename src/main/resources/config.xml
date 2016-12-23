@@ -21,5 +21,10 @@
       class="com.styopik.librarymanager.service.impl.BookServiceImpl">
       <property name="bookDao" ref="bookDaoImpl" />    
    </bean>
+   
+   <bean id="libraryController" 
+      class="com.styopik.librarymanager.controller.LibraryController">
+      <property name="bookService" ref="bookServiceImpl" />    
+   </bean>
       
 </beans>
