@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS BCREW;
+
+create table if not exists BOOK (
+   id BIGINT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(200) NOT NULL,
+   author BIGINT NOT NULL,
+   PRIMARY KEY (id)
+);
