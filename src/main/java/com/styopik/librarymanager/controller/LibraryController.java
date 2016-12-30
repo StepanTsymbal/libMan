@@ -11,9 +11,9 @@ import com.styopik.librarymanager.service.BookService;
 
 public class LibraryController {
 	
-	BookService bookService;
+	private BookService bookService;
 
-	Scanner in;
+	private Scanner in;
 	
 	public void setBookService(BookService bookService) {
 		this.bookService = bookService;

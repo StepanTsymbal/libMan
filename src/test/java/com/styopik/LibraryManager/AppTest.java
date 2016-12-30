@@ -2,7 +2,6 @@ package com.styopik.LibraryManager;
 
 import com.styopik.librarymanager.controller.LibraryController;
 import com.styopik.librarymanager.model.Book;
-import com.styopik.librarymanager.service.impl.BookServiceImpl;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -2,13 +2,9 @@ package com.styopik.librarymanager.dao;
 
 import java.util.List;
 
-import javax.sql.DataSource;
-
 import com.styopik.librarymanager.model.Book;
 
 public interface BookDAO {
-	
-	public void setDataSource(DataSource dataSource);
 	
 	public void addBook(Book book);
 	
