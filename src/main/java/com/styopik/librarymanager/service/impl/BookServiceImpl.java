@@ -15,33 +15,26 @@ public class BookServiceImpl implements BookService {
 	}
 
 	public void addBook(Book book) {
-		
 		bookDao.addBook(book);
 	}
 
 	public void removeBookById(int id) {
-		
 		bookDao.deleteBook(id);
 	}
 
 	public List<Book> findAll() {
-		
 		return bookDao.findAll();
 	}
 
 	public List<Book> findBooksByName(String name) {
-		
 		return bookDao.findByName(name);
 	}
 
 	public void editBookNameById(String newName, int id) {
-		
 		bookDao.editBookById(newName, id);
 	}
 
 	public Book findById(int id) {
-		
 		return bookDao.findById(id);
 	}
-	
 }

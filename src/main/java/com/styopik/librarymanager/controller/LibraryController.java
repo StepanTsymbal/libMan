@@ -28,36 +28,25 @@ public class LibraryController {
 	        String s = in.nextLine();
 	        
 	        switch (s.split(" ")[0]) {
-	        
 		        case "all":
-		        	
 		        	getAllBooks(s);
 		    		break;
-		    		
 		        case "add":
-		        	
 		        	addBook(s);
 		        	break;
-		        	
 		        case "remove":
-		        	
 		        	removeBook(s);
 		        	break;
-		        	
 		        case "edit":
-		
 		        	editBook(s);
 		        	break;
-		        	
 		        default:
-		        	
 		        	getInstruction();
 		        }
         }
 	}
 	
 	public String getName(String s) {
-		
 		return s.substring(s.indexOf(" ") + 1);
 	}
 	
@@ -92,7 +81,6 @@ public class LibraryController {
 	}
 
 	private void getAllBooks(String s) {
-		
     	System.out.println("Our books:");
     	for(Book bookTemp : bookService.findAll()) {
     		System.out.println(bookTemp);
@@ -100,7 +88,6 @@ public class LibraryController {
 	}
 
 	private void addBook(String s) {
-    	
 		Book book;
     	String name;
     	String author;
@@ -129,18 +116,14 @@ public class LibraryController {
 	}
 
 	private void removeBook(String s) {
-		
 		Book book;
     	String name = getName(s);
-    	
     	List<Book> listBook = bookService.findBooksByName(name);
     	
     	if (listBook.size() > 1) {
-
     		int id = 0;
     		
     		showListByName(listBook, "deleted");
-    		
     		while (true) {
         		try {
             		id = Integer.parseInt(in.nextLine());
@@ -164,19 +147,15 @@ public class LibraryController {
 	}
 
 	private void editBook(String s) {
-		
 		Book book;
     	String newName;
-    	
     	String name = getName(s);
     	List<Book> listBook = bookService.findBooksByName(name);
     	
     	if (listBook.size() > 1) {
-
     		int id = 0;
     		
     		showListByName(listBook, "edited");
-    		
     		while (true) {
         		try {
         			id = Integer.parseInt(in.nextLine());
@@ -205,7 +184,6 @@ public class LibraryController {
 	}
 	
 	private void showListByName(List<Book> listBook, String postfix) {
-		
 		int i = 1;
 		
 		System.out.println("There are several books with such name:");
